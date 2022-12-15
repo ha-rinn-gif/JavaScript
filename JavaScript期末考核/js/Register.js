@@ -1,8 +1,8 @@
 // 获取所有input框
-var inputs = document.getElementsByTagName('input');
+var tips = document.getElementsByTagName('input');
 // 为每个input框添加失去焦点事件
-for (var i = 0; i < inputs.length - 1; ++i) {
-    inputs[i].onblur = inputBlur;
+for (var i = 0; i < tips.length - 1; ++i) {
+    tips[i].onblur = inputBlur;
 }
 function inputBlur() {
     var name = this.name;           // 获取输入框的name值
@@ -78,14 +78,6 @@ function none(obj) {
     tips2.classList.remove('color-error')
     tips2.classList.remove('color-success')
 }
-//抖动
-function shake(elemId) {
-    let elem = document.getElementById(elemId)
-    if (elem) {
-        elem.classList.add('shake')
-        setTimeout(()=>{ elem.classList.remove('shake') }, 800)
-    }
-}
 var register_btn = document.getElementById("register_btn");
 //点击注册触发事件
 register_btn.addEventListener("click",function(){
@@ -132,33 +124,20 @@ register_btn.addEventListener("click",function(){
             window.location.href = "login.html";
         },1000);  //1秒
     } else{
-        //错误的、未填的抖动提醒
-        for(let i=0;i<error_inputs.length;++i) {
-                //添加抖动效果
-                var tips = error_inputs[i].parentNode.parentNode;
-                tips.classList.add('shake');
-                //边框变红
-                var tips2 = error_inputs[i].parentNode.previousSibling.previousSibling;
-                tips2.classList.add('color-error');
-                //调用setout动画活动时间
-                setTimeout(() => {
-                    setout()
-                }, 800)
-                //清空输入框
-                tips2.value = "";
-                //右边小图标变回空值状态
-                error_inputs[i].className = "span-none";
-            }
-        }
-//停止动画效果
-    function setout() {
-        for (let i=0;i<error_inputs.length;++i) {
-            //删除抖动效果
-            var tips=error_inputs[i].parentNode.parentNode;
-            tips.classList.remove('shake')
-            //删除边框变红
-            var tips2=error_inputs[i].parentNode.previousSibling.previousSibling;
-            tips2.classList.remove('color-error')
+        //调用shake使输入错误和空值的输入框抖动
+        shake();
+    }
+    //抖动变红
+    function shake() {
+        for (let i=0;i<error_inputs.length;++i){
+            error_inputs[i].parentNode.parentNode.classList.add('shake')
+            error_inputs[i].parentNode.previousSibling.previousSibling.classList.add('color-error');
+            setTimeout(()=>{ error_inputs[i].parentNode.parentNode.classList.remove('shake') }, 800)
+            setTimeout(()=>{ error_inputs[i].parentNode.previousSibling.previousSibling.classList.remove('color-error') }, 800)
+            var tips2 = error_inputs[i].parentNode.previousSibling.previousSibling;
+            tips2.value = "";
+            //右边小图标变回空值状态
+            error_inputs[i].className = "span-none";
         }
     }
 })

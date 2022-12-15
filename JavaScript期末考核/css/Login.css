@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center; /*在容器中央对齐弹性项目*/
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image:url(../images/dyy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.login-box{
+    display: flex;
+    justify-content: center;  /*居中排列*/
+    align-content:space-around;
+    flex-wrap: wrap;  /*项目排在一条线上，换行，第一行在上方*/
+    width: 530px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 10px;
+    padding: 20px 50px;
+    border-radius: 20px;
+}
+.login-box h4{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #0e1011;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.login-box .input-box{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-35px);
+}
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    margin-top: 10px;
+    justify-content: center;
+}
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid #0000005c;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+.color-error{
+    border: 2px solid #ff0000;
+}
+.color-success{
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(81, 229, 70, 0.55);
+}
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+    outline: none;
+    box-shadow: 0 0 0 4px #0f58f86b;
+}
+
+.ion {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 25px;
+    height: 25px;
+    margin-left: -5px;
+}
+
+.login-box  .input-box  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 180px;
+    height: 30px;
+    color: #fff;
+    background: linear-gradient(120deg, #f6c83a 0%, #0c25a5 100%);
+    border-radius: 25px;
+    border: 0;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.login-box  .input-box  .button:hover {
+    outline: none;
+    box-shadow: 0 0 0 4px #ffde79b5;
+}
+.login-box  .input-box  .signup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: #0a0707;
+    font-size: 15px;
+
+}
+.login-box  .input-box  .signup a{
+    color: #0f58f8;
+    text-decoration: none;
+}
+.p{
+    color: red;
+}

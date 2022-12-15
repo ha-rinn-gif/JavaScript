@@ -1,0 +1,199 @@
+/* 清除自带间距 */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 清除列表自带列表符号 */
+ul.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(37, 127, 255);
+}
+li.nav{
+    float: left;
+}
+li.nav-2{
+    float: right;
+}
+a.nav{
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    /* 强制转换a标签为块元素 */
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+p.nav{
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    display:inline-flex;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    background-color: #1c3fa8;
+}
+div.menu{
+    background-color: #dce6ff;
+    height:680px;
+    width:20%;
+    float:left;
+}
+div.content{
+    background-color: #ffffff;
+    height:680px;
+    width:80%;
+    float:left;
+}
+div.footer{
+    background-color: #fdebc6;
+    clear:both;
+    text-align:center;
+}
+/*轮播图样式*/
+.banner{position:relative;overflow:hidden;width:100%;height:200px;}
+.banner ul{margin:0;padding:0;list-style:none;}
+.hot{position:absolute;top:0;left:0;}
+.hot li{float:left;}
+/* 小圆点样式 */
+.dot{position:absolute;bottom:10px;width:100%;text-align:center;font-size:0;}
+.dot li{display:block;display:inline-block;margin:0 5px;width:10px;height:10px;border-radius:100%;background:rgba(145,144,144,.5);cursor:pointer;}
+.dot .on{background-color:#fff;}
+/*图片*/
+body{
+    background-color:#ddd;
+}
+.box{
+    width:760px;
+    height:600px;
+    background:#fff;
+    margin:30px auto;
+    padding:20px;
+}
+.box .head span{
+    font-size:18px;
+    color:#333;
+}
+.box .head{
+    margin-bottom:20px;
+}
+.box .head a{
+    text-decoration:none;
+    float:right;
+    font-size:15px;
+    color:#333;
+}
+.box .head a:hover{
+    color:#F00;
+}
+.box ul li{
+    width:160px;
+    height:240px;
+    list-style:none;
+    position:relative;
+    float:left;
+    margin-left:20px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+.box ul li .deatil{
+    width:160px;
+    height:240px;
+    background:rgba(0,0,0,0.7);
+    position:absolute;
+    top:-240px;
+}
+.box ul li .deatil h2{
+    font-size:18px;
+    color:#fff;
+    text-align:center;
+    padding-top:30px;
+}
+.box ul li .deatil p{
+    font-size:16px;
+    text-align:center;
+    margin:30px;
+    color:#fff;
+}
+.box ul li .deatil a{
+    font-size:15px;
+    display:block;
+    color:#fff;
+    background-color:#F00;
+    text-decoration:none;
+    width:100px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    margin:0 auto;
+}
+.box ul li:hover .deatil{
+    top:0;
+}
+/*倒计时*/
+.container {
+    position: absolute;
+    display: contents;
+    margin-top: 10px;
+}
+.container h2 {
+    text-align: center;
+    font-size: 50px;
+    line-height: 0.8em;
+    color: #ff3232;
+}
+.container h2 span {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 25px;
+}
+.countdown {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.countdown div {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin: -30px 4px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+}
+.countdown div:before {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #b00000;
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 300;
+    border-radius: 0 0 10px 10px;
+}
+.countdown #day:before {
+    content: '天';
+}
+.countdown #hour:before {
+    content: '时';
+}
+.countdown #minute:before {
+    content: '分';
+}
+.countdown #second:before {
+    content: '秒';
+}
+
+

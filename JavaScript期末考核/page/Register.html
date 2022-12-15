@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/Register.css">
+</head>
+<body>
+<div class="login-box">
+    <h4>注册</h4>
+    <div class="input-box">
+        <div class="group" id="username">
+            <span class="ion"><img src="../images/user.png" style="width: 25px;height: 25px;"></span>
+            <input type="text" name="user_name" id="user_name" placeholder="长度4~12，数字英文大小写字母" class="input">
+            <span class="right-ion"><div id="namecheck" class="span-none"></div></span>
+        </div>
+        <div class="group"  id="userpwd">
+            <span class="ion"><img src="../images/pwd.png" style="width: 25px;height: 25px;"></span>
+            <input type="password" name="user_password" id="user_password" placeholder="长度6~20，大小写字母、数字或下划线" class="input">
+            <span class="right-ion"><div id="pwdcheck" class="span-none"></div></span>
+        </div>
+        <div class="group"  id="userrepwd">
+            <span class="ion"><img src="../images/repwd.png" style="width: 25px;height: 25px;"></span>
+            <input type="password" name="user_repwd" id="user_repwd" placeholder="请再次输入密码进行确认" class="input">
+            <span class="right-ion"><div id="repwdcheck" class="span-none"></div></span>
+        </div>
+        <div class="group"  id="useremail">
+            <span class="ion"><img src="../images/email.png" style="width: 25px;height: 25px;"></span>
+            <input type="text" name="user_email" id="user_email" placeholder="用户名@域名（域名后缀至少2个字符)" class="input">
+            <span class="right-ion"><div id="emailcheck" class="span-none"></div></span>
+        </div>
+        <div class="group">
+            <p class="p" id="register_sucss">&nbsp;</p>
+        </div>
+        <input class="button" type="button" id="register_btn" value="注册">
+        <div class="signup">
+            已有账户？<a href="Login.html">登录</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/Register.js"></script>
+</html>

@@ -108,7 +108,7 @@ register_btn.addEventListener("click",function(){
     function doubleCheck(boolean) {
         return success_inputs.length===check_divs.length;
     }
-    //全部信息输入正确
+    //判断输入框的信息是否输入正确
     if (doubleCheck()){
         var name=document.getElementById("user_name").value;
         var pwd= document.getElementById("user_password").value;

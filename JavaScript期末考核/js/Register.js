@@ -86,25 +86,22 @@ register_btn.addEventListener("click",function(){
     var check_divs=[];
     var success_inputs=[];
     var error_inputs=[];
-    //所有的判断窗口
+    //调出所有的判断窗口
     for(let i = 0,j=0; i<divs.length; ++i){
         if(divs[i].className==="span-success"||divs[i].className==="span-error"||divs[i].className==="span-none"){
             check_divs[j]=divs[i];
             ++j;
         }
     }
-    //输入正确的窗口
-    for (let i = 0 ,j=0; i<check_divs.length; ++i) {
+    //将窗口进分类
+    for (let i = 0 ,j=0 , k=0; i<check_divs.length; ++i) {
         if (check_divs[i].className==="span-success"){
-            success_inputs[j]=check_divs[i];
+            success_inputs[j]=check_divs[i];//输入正确的窗口
             ++j;
         }
-    }
-    //输入错误的窗口
-    for (let i = 0 ,j=0; i<check_divs.length; ++i) {
         if (check_divs[i].className!=="span-success"){
-            error_inputs[j]=check_divs[i];
-            ++j;
+            error_inputs[k]=check_divs[i];//输入错误的窗口
+            ++k;
         }
     }
     //判断全部信息是否输入正确
